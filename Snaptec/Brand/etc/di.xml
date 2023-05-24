@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Snaptec\Brand\Api\BrandInterface" type="Snaptec\Brand\Model\Api\BrandRepository"/>
+    <type name="Magento\GraphQl\Model\Query\SchemaPool">
+        <arguments>
+            <argument name="schemaDefinitions" xsi:type="array">
+                <item name="brand" xsi:type="string">Snaptec\Brand\Model\Resolver\BrandSave</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

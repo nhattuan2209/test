@@ -1,0 +1,14 @@
+type Mutation {
+  addBrand(id: String!, title: String!, content: String!, image: UploadImage!): BrandOutPut @resolver(class: "Snaptec\\Brand\\Model\\Resolver\\BrandSave") @doc(description: "Enter your new title, content and image of your Brand")
+}
+
+input UploadImage {
+  base64_image: String
+}
+
+type BrandOutPut {
+  id: String
+  title: String
+  content: String
+  image_url: String
+}
